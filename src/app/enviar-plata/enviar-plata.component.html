@@ -1,0 +1,37 @@
+<h2 mat-dialog-title style="color: black">Enviar plata</h2>
+<mat-dialog-content class="mat-typography">
+    <form [formGroup]="form">
+      <div class="row">
+        <div class="col-12">
+          <mat-form-field class="w100">
+              <input autocomplete="off" matInput formControlName="documento" placeholder="Ingresa el documento">
+            </mat-form-field>
+        </div>
+      </div>
+          <button (click)="buscar()" mat-raised-button color="primary">Buscar</button>
+          <div>
+            <span *ngIf="resultado.length > 0">
+              <h3 class="name top4">
+                {{resultado[0].nombreCompleto}}
+              </h3>
+
+
+              <mat-form-field class="w100">
+                <input autocomplete="off" matInput formControlName="dinero" type="number" placeholder="Ingrese el dinero que va enviar">
+                <mat-error *ngIf="form.get('dinero').hasError('max')">No puedes enviar mas de <strong>{{this.data.miinfo.dinero | currency}}</strong></mat-error>  
+              </mat-form-field>
+
+              <button mat-raised-button class="send" [disabled]="!this.form.controls.dinero.valid" (click)="enviar()">Enviar dinero</button>
+
+            </span>
+            <span style="text-align: center;" *ngIf="resultado.length == 0">
+              <h4>
+                No se encontraron resultados
+              </h4>
+            </span>
+          </div>
+    </form>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Cerrar</button>
+</mat-dialog-actions>

@@ -1,0 +1,60 @@
+.example-icon {
+    padding: 0 14px;
+  }
+  
+  .example-spacer {
+    flex: 1 1 auto;
+  }
+
+  /* .body{
+      height: 100vh;
+      background-color: #F5F7FA ;
+  } */
+
+  .card2{
+    padding: 25px;
+    border-radius: 9px;
+    background-color: #F5F7FA;
+  }
+
+  .w80{
+      display: block;
+      margin: auto;
+      width: 90%;
+  }
+
+  .balanc{
+    font-size: 29px;
+    font-weight: 400;
+  }
+
+  .top8{
+      margin-top: 8%;
+  }
+
+  .botones{
+    margin-bottom: 10px;
+    margin-top: 10px;
+    color: #f44336;
+    background-color: #f5f7fa;
+    box-shadow: none;
+    border: 1px solid;
+    border-radius: 40px;
+  }
+
+  .estimado{
+      margin: 0;
+    font-size: 15px;
+    color: gray;
+    position: relative;
+    bottom: 10px;
+  }
+
+  .top4{
+    margin-top: 4%;
+  }
+
+  .balance{
+    color: #f44336;
+    font-weight: 600;
+  }

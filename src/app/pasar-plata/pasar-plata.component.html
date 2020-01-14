@@ -1,0 +1,110 @@
+
+<mat-toolbar color="warn">
+    <mat-toolbar-row>
+      <span>PayNew</span>
+      <span class="example-spacer"></span>
+      <h4 style="color: white;margin-right: 10px;">{{infouser.nombreCompleto}}</h4>
+      <img [matMenuTriggerFor]="menu" style="cursor: pointer;" height="50" width="50px" src="./assets/img/teacher.png" alt="">
+      <!-- <mat-icon class="example-icon" aria-hidden="false" aria-label="Example heart icon">favorite</mat-icon>
+      <mat-icon class="example-icon" aria-hidden="false" aria-label="Example delete icon">exit_to_app</mat-icon> -->
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item>Mi Perfil</button>
+        <button mat-menu-item (click)="login()">Cerrar sesión</button>
+      </mat-menu>
+    </mat-toolbar-row>
+</mat-toolbar>
+<div class="body w80">
+            <div class="row top4">
+                <div class="col-md-6">
+                    <div class="col-md-12">
+                        <div class="card2">
+                            <h4 class="balance">PayNew Balance</h4>
+    
+                            <div>
+                                <span class="balanc">
+                                    COP$ {{infouser.dinero | currency}}
+                                </span>
+                                <p class="estimado">
+                                    Total estimado.
+                                </p>
+                            </div>
+                            <button mat-raised-button class="botones" color="primary">Transferir fondos</button>
+                            <button mat-raised-button (click)="recargar()" class="botones" style="margin-left: 7px;" color="primary">Recargar</button>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12">
+                        <div class="card2 top4">
+                            <h4 class="balance">Actividad reciente</h4>
+                            <div>
+                                <span style="font-size: 14px;font-weight: 500;" class="balanc">
+                                    Vea cuándo entran los pagos y cuándo salen. Encontrará su actividad reciente de PayNew aquí.
+                                </span>
+                            </div>
+                            <button style="margin-top: 2%;" mat-raised-button class="botones" color="primary">Mostrar más</button>
+                        
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-md-6">
+                    <div class="row" style="text-align: center;">
+                        <div class="col-md-4">
+                            <button (click)="enviarPlata()" mat-raised-button class="botones" color="primary">Enviar plata</button >
+                        </div>
+                        <div class="col-md-4">
+                            <button mat-raised-button class="botones" style="    font-size: 13px;" color="primary">Recibir plata</button>
+                        </div>
+                        <div class="col-md-4">
+                            <button mat-raised-button class="botones" color="primary">Más</button>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="top4">
+                            <h4 class="balance">Obten mas de PayNew</h4>
+                            <div class="row top4">
+                                <div class="col-md-2">
+                                    <img width="50px" height="50px" src="./assets/img/add.png" alt="">
+                                </div>
+                                <div class="col-md-10">
+                                    <span>
+                                        <strong>
+                                            Agrega tu foto
+                                        </strong> <br>
+Ayude a las personas a saber que están enviando pagos a la persona adecuada.
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="row top4">
+                                <div class="col-md-2">
+                                    <img width="50px" height="50px" src="./assets/img/add-user.png" alt="">
+                                </div>
+                                <div class="col-md-10">
+                                    <span>
+                                        <strong>
+                                            Agrega tus contactos
+                                        </strong><br>
+                                        Encuentra a las personas a las que más les envías pagos
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="row top8">
+                                <span>
+
+                                    <strong>
+                                        Bancos y tarjetas
+                                    </strong> <br>
+     Compre y envíe pagos de forma más segura. Vincula tu banco o tarjeta ahora.
+    </span>
+    <button mat-raised-button class="botones" color="primary">Enlace una tarjeta o banco</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+</div>
+
+
+  

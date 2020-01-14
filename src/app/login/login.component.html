@@ -1,0 +1,47 @@
+
+	<div class="limiter">
+		<div class="container-login100" style="background-image: url('./assets/img/bg-01.jpg');">
+			<div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
+				<form class="login100-form validate-form">
+					<span class="login100-form-title p-b-49">
+						PayNew
+					</span>
+
+					<div class="wrap-input100" [formGroup]="form">
+                          <mat-form-field class="w100">
+                            <input autocomplete="off" matInput formControlName="correo" placeholder="Correo electronico">
+                          </mat-form-field>
+					</div>
+
+					<div class="wrap-input100" [formGroup]="form">
+
+                        <mat-form-field class="w100">
+                            <input type="password" autocomplete="off" formControlName="password" matInput placeholder="Contraseña">
+                          </mat-form-field>
+					</div>
+					
+					<div class="text-right p-t-8 p-b-31">
+						<a (click)="resetpassword()" style="font-family: Roboto, 'Helvetica Neue', sans-serif;cursor: pointer;">
+							¿Olvidaste la contraseña?
+						</a>
+					</div>
+					
+					<div class="container-login100-form-btn">
+						<div class="wrap-login100-form-btn">
+							<div class="login100-form-bgbtn"></div>
+							<button (click)="login()" [ngClass]="{'login100-form-btngray': !form.valid, 'login100-form-btn' : form.valid }" style="text-transform: inherit;    font-family: Roboto, 'Helvetica Neue', sans-serif">
+								Inicar sesión
+							</button >
+						</div>
+					</div>
+
+
+					<div class="flex-col-c p-t-25">
+						<a href="#" [routerLink]="['/registro']" routerLinkActive="router-link-active"  class="txt2" style="font-family: Roboto, 'Helvetica Neue', sans-serif;text-transform: capitalize;font-weight: bold;">
+							Registrate
+						</a>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>

@@ -1,0 +1,61 @@
+
+	<div class="limiter">
+        <div class="container-login100" style="background-image: url('./assets/img/bg-01.jpg');">
+            <form >
+			<div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
+				<form class="login100-form validate-form">
+					<span class="login100-form-title p-b-49">
+						PayNew
+                    </span>
+                    
+                    <div [formGroup]="form" class="wrap-input100">
+                        <mat-form-field class="w100">
+                            <input  autocomplete="off" formControlName="nombre" matInput placeholder="Nombre completo">
+                            <mat-error *ngIf="this.form.controls.nombre.invalid">El Nombre completo es requerido</mat-error>  
+                        </mat-form-field>
+                    </div>
+
+                    <div [formGroup]="form" class="wrap-input100">
+                        <mat-form-field class="w100">
+                            <input (keypress)="numberOnly($event)"  autocomplete="off" formControlName="documento" matInput placeholder="Número de documento">
+                            <mat-error *ngIf="this.form.controls.documento.invalid">El número de documento es requerido</mat-error>  
+                        </mat-form-field>
+                    </div>
+                    
+					<div [formGroup]="form" class="wrap-input100">
+                          <mat-form-field class="w100">
+                            <input autocomplete="off" formControlName="correo" matInput placeholder="Correo electronico">
+                            <mat-error *ngIf="this.form.controls.correo.invalid">El correo es requerido</mat-error>  
+                        </mat-form-field>
+					</div>
+
+					<div [formGroup]="form" class="wrap-input100">
+
+                        <mat-form-field class="w100">
+                            <input  autocomplete="off" type="password" formControlName="password" matInput placeholder="Contraseña">
+                            <mat-error *ngIf="this.form.controls.correo.invalid">La contraseña es requerida</mat-error>  
+                        </mat-form-field>
+                    </div>
+                    
+					
+					<div class="container-login100-form-btn" style="    margin-top: 4%;
+                    ">
+						<div class="wrap-login100-form-btn">
+							<div class="login100-form-bgbtn"></div>
+							<button (click)="registro()" [ngClass]="{'login100-form-btngray': !form.valid, 'login100-form-btn' : form.valid }" [disabled]="!form.valid" style="text-transform: inherit;    font-family: Roboto, 'Helvetica Neue', sans-serif">
+								Registrate
+							</button>
+						</div>
+					</div>
+
+
+					<div class="flex-col-c p-t-25">
+						<a href="#" [routerLink]="['/login']" routerLinkActive="router-link-active"  class="txt2" style="font-family: Roboto, 'Helvetica Neue', sans-serif;text-transform: capitalize;font-weight: bold;">
+							Inicar sesión
+						</a>
+					</div>
+				</form>
+			</div>
+        </form>
+		</div>
+	</div>

@@ -1,0 +1,21 @@
+.w100{
+    width: 100%;
+}
+
+.name{
+    text-align: center;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.top4{
+    margin-top: 4%;
+}
+
+.send{
+    color: white;
+    background-color: #207d0c;
+    margin: auto;
+    display: block;
+    font-size: 19px;
+}
